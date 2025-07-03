@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Chronic Kidney Disease Detection</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
+                <li><a href="{{ url_for('generic') }}">Learn More</a></li>
+                <li><a href="{{ url_for('result') }}">Test Yourself</a></li>
+            </ul>
+        </nav>
+        <!-- Header -->
+        <header id="header" class="alt">
+            <span class="logo">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="" style="width:20%;height:auto;max-width:250px;" />
+            </span>
+            <h1>Chronic Kidney Disease Detector</h1>
+            <p><b>A Machine Learning Model built by students, for the early prediction of Chronic Kidney Disease.</b></p>
+            <p>Chronic kidney disease (CKD) is a progressive, non-communicable disease characterized by a gradual loss of kidney function over months or years. CKD affects a substantial portion of the global population, with prevalence estimates consistently exceeding 10% worldwide, translating to over 700 million people worldwide. There is no cure for CKD, thus making early prediction absolutely necessary.</p>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#intro" class="active">Introduction</a></li>
+                <li><a href="#first">What Causes CKD?</a></li>
+                <li><a href="#second">Symptoms of CKD</a></li>
+                <li><a href="#cta">Get Started</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Introduction -->
+            <section id="intro" class="main">
+                <div class="spotlight">
+                    <div class="content">
+                        <header class="major">
+                            <h2>Introduction</h2>
+                        </header>
+                        <p>Chronic Kidney Disease (CKD) is a long-term condition marked by the gradual loss of kidney function over time. The kidneys are vital organs responsible for filtering waste, balancing fluids, and regulating blood pressure. When they become damaged, waste products and excess fluid can build up in the body, leading to serious health complications. CKD often progresses silently, showing few symptoms until advanced stages, making early detection and management essential for preventing irreversible damage.</p>
+                        <ul class="actions">
+                            <li><a href="{{ url_for('generic') }}" class="button">Learn More</a></li>
+                        </ul>
+                    </div>
+                    <span class="image"><img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt="" /></span>
+                </div>
+            </section>
+
+            <!-- First Section -->
+            <section id="first" class="main special">
+                <header class="major">
+                    <h2>What Causes CKD?</h2>
+                </header>
+                <ul class="features">
+                    <li>
+                        <span class="image">
+                            <img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" style="width:40vw; max-width:240px; height:auto; aspect-ratio:1/1; object-fit:cover;" />
+                        </span>
+                        <h3>Comorbidities</h3>
+                        <p>Diabetes and high blood pressure, which damage kidney blood vessels over time</p>
+                    </li>
+                    <li>
+                        <span class="image">
+                            <img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="" style="width:40vw; max-width:240px; height:auto; aspect-ratio:1/1; object-fit:cover;" />
+                        </span>
+                        <h3>Infections</h3>
+                        <p>Chronic kidney infections, autoimmune diseases, and inherited disorders such as polycystic kidney disease</p>
+                    </li>
+                    <li>
+                        <span class="image">
+                            <img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt="" style="width:40vw; max-width:240px; height:auto; aspect-ratio:1/1; object-fit:cover;" />
+                        </span>
+                        <h3>Medication</h3>
+                        <p>Long-term urinary tract obstructions or repeated use of medications toxic to the kidneys</p>
+                    </li>
+                </ul>
+                <footer class="major">
+                    <ul class="actions special">
+                        <li><a href="{{ url_for('generic') }}" class="button">Learn More</a></li>
+                    </ul>
+                </footer>
+            </section>
+
+            <!-- Second Section -->
+            <section id="second" class="main special">
+                <header class="major">
+                    <h2>Symptoms of CKD</h2>
+                </header>
+                <p class="content">Early stages of CKD are typically asymptomatic. As kidney function declines, symptoms may include fatigue, swelling in the legs and ankles, changes in urination, shortness of breath, and confusion. Diagnosis relies on blood tests (measuring creatinine and estimating glomerular filtration rate), urine tests (for protein or blood), and imaging studies. Regular screening is recommended for at-risk populations to enable timely intervention.</p>
+                <footer class="major">
+                    <ul class="actions special">
+                        <li><a href="{{ url_for('generic') }}" class="button">Learn More</a></li>
+                    </ul>
+                </footer>
+            </section>
+
+            <!-- Get Started -->
+            <section id="cta" class="main special">
+                <header class="major">
+                    <h2>Test for yourself</h2>
+                    <p>Think you may have CKD?<br />
+                    Take a test today!</p>
+                </header>
+                <footer class="major">
+                    <ul class="actions special">
+                        <li><a href="{{ url_for('result') }}" class="button primary">Get Started</a></li>
+                        <li><a href="{{ url_for('generic') }}" class="button">Learn More</a></li>
+                    </ul>
+                </footer>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h2>About Us</h2>
+                <p><b>We're a group of students determined to make healthcare more accessible. We believe that preliminary screening for most diseases can be made faster and more accessible using Machine Learning.</b></p>
+            </section>
+            <p class="copyright">&copy; VIT Vellore Students Team.</p>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+</html>

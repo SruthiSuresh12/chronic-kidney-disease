@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CKD Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+            /* Hospital-tone blue-green gradient background */
+            background: linear-gradient(135deg, #b8efac 0%, #b3e5fc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .result-section {
+            max-width: 500px;
+            width: 100%;
+            margin: auto;
+            padding: 2em;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .result-section h2 {
+            color: #1486cc;
+            margin-bottom: 1.2em;
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 2em;
+        }
+        .result-success {
+            color: #14866d;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 1.5em 0;
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+        }
+        .result-fail {
+            color: #b32424;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 1.5em 0;
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2em;
+            color: #5daddf;
+            font-weight: 600;
+            font-size: 1em;
+            border-radius: 6px;
+            padding: 0.3em 1em;
+            background: #b3e5fc;
+            transition: background 0.2s, color 0.2s;
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: #a5d6a7;
+            color: #0b4c3a;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-section">
+        <h2>Prediction Result</h2>
+        {% if prediction_text == "The patient is likely to have Chronic Kidney Disease." %}
+            <div class="result-fail">{{ prediction_text }}</div>
+        {% elif prediction_text == "The patient is not likely to have Chronic Kidney Disease." %}
+            <div class="result-success">{{ prediction_text }}</div>
+        {% else %}
+            <div>{{ prediction_text }}</div>
+        {% endif %}
+        <a href="{{ url_for('result') }}" class="back-link">Test Again</a>
+        <a href="{{ url_for('home') }}" class="back-link" style="margin-left:1em;">Back to Home</a>
+    </div>
+</body>
+</html>

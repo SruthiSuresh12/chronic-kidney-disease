@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Learn More About Chronic Kidney Disease</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('generic') }}" class="active">Learn More</a></li>
+                <li><a href="{{ url_for('result') }}">Test Yourself</a></li>
+            </ul>
+        </nav>
+
+        <!-- Header -->
+        <header id="header">
+            <h1>Learn More About Chronic Kidney Disease</h1>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Content -->
+            <section id="content" class="main">
+                <span class="image main">
+                    <img src="{{ url_for('static', filename='images/pic05.jpg') }}" alt="Patient with Doctor" />
+                </span>
+
+                <h2>What is Chronic Kidney Disease?</h2>
+                <p>
+                    Chronic Kidney Disease (CKD) is a progressive condition where the kidneys gradually lose their ability to filter waste and excess fluids from the blood. CKD can advance silently for years, often without noticeable symptoms until significant kidney function is lost.
+                </p>
+
+                <h2>Causes of CKD</h2>
+                <ul>
+                    <li><strong>Diabetes and Hypertension:</strong> The leading causes, damaging the small blood vessels in the kidneys over time.</li>
+                    <li><strong>Chronic Infections and Autoimmune Diseases:</strong> Conditions such as glomerulonephritis and lupus can harm kidney tissue.</li>
+                    <li><strong>Inherited Disorders:</strong> Polycystic kidney disease and other genetic conditions can lead to CKD.</li>
+                    <li><strong>Urinary Tract Obstructions and Medications:</strong> Long-term blockages or repeated use of nephrotoxic drugs can contribute.</li>
+                </ul>
+
+                <h2>Symptoms</h2>
+                <p>
+                    Early CKD may have no symptoms. As the disease progresses, patients may experience swelling, fatigue, changes in urination, shortness of breath, and confusion.
+                </p>
+
+                <h2>Diagnosis</h2>
+                <ul>
+                    <li><strong>Blood Tests:</strong> Measure creatinine and estimate glomerular filtration rate (eGFR).</li>
+                    <li><strong>Urine Tests:</strong> Detect protein or blood in the urine.</li>
+                    <li><strong>Imaging:</strong> Ultrasound or CT scans assess kidney structure and size.</li>
+                </ul>
+
+                <h2>Managing CKD</h2>
+                <ul>
+                    <li><strong>Control Underlying Conditions:</strong> Effective management of diabetes and high blood pressure is crucial.</li>
+                    <li><strong>Dietary Modifications:</strong> Low-salt, low-protein diets help reduce kidney workload.</li>
+                    <li><strong>Medication:</strong> Prescribed to manage symptoms and slow progression.</li>
+                    <li><strong>Lifestyle Changes:</strong> Regular exercise, quitting smoking, and limiting alcohol intake are recommended.</li>
+                    <li><strong>Regular Monitoring:</strong> Routine check-ups help track disease progression and adjust treatment.</li>
+                </ul>
+
+                <h2>Advanced CKD</h2>
+                <p>
+                    In severe cases, kidney function may decline to the point where dialysis or a kidney transplant is necessary. Early detection and intervention remain the best strategies for improving outcomes.
+                </p>
+
+                <h2>Support and Resources</h2>
+                <p>
+                    Living with CKD can be challenging. Support groups, counseling, and educational resources are available through organizations such as the <a href="https://www.kidney.org/" target="_blank">National Kidney Foundation</a> and the <a href="https://www.cdc.gov/kidneydisease/" target="_blank">CDC Chronic Kidney Disease Program</a>.
+                </p>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h2>About Us</h2>
+                <p><b>We're a group of students determined to make healthcare more accessible. We believe that preliminary screening for most diseases can be made faster and more accessible using Machine Learning.</b></p>
+            </section>
+            <p class="copyright">&copy; VIT Vellore Students Team.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>
